@@ -1,3 +1,5 @@
+### Plan
+
 1. **Create the HTML structure**:
     - An input field for the user to enter the binary number (up to 8 digits).
     - A button to trigger the conversion.
