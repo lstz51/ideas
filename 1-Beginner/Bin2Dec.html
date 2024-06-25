@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bin2Dec Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        input, button, output {
+            margin: 10px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        #notification {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Binary to Decimal Converter</h1>
+        <input type="text" id="binaryInput" maxlength="8" placeholder="Enter up to 8 binary digits">
+        <button id="convertButton">Convert</button>
+        <output id="decimalOutput"></output>
+        <div id="notification"></div>
+    </div>
+
+    <script>
+        document.getElementById('convertButton').addEventListener('click', function() {
+            const binaryInput = document.getElementById('binaryInput').value;
+            const notification = document.getElementById('notification');
+            const decimalOutput = document.getElementById('decimalOutput');
+            
+            if (!/^[01]{1,8}$/.test(binaryInput)) {
+                notification.textContent = 'Please enter a valid binary number (0 or 1) up to 8 digits.';
+                decimalOutput.textContent = '';
+                return;
+            }
+
+            notification.textContent = '';
+            let decimalValue = 0;
+            for (let i = 0; i < binaryInput.length; i++) {
+                const bit = binaryInput[binaryInput.length - 1 - i];
+                decimalValue += parseInt(bit) * Math.pow(2, i);
+            }
+
+            decimalOutput.textContent = decimalValue;
+        });
+    </script>
+</body>
+</html>
