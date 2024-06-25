@@ -115,8 +115,3 @@ Here is the pseudocode for our approach:
   - A regular expression checks if the input is a valid binary number (only contains 0 and 1, up to 8 digits).
   - The conversion function calculates the decimal equivalent by iterating through each binary digit, using the formula for binary to decimal conversion.
   - The result is displayed in the output field, or an error message is shown if the input is invalid.
-
-### Next Steps
-**a.** Add unit tests to validate the binary to decimal conversion logic.
-
-**b.** Enhance the input validation to handle edge cases (e.g., empty input, non-binary characters).
