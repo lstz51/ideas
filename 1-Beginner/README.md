@@ -1,5 +1,3 @@
-To build a Binary to Decimal converter (Bin2Dec) that follows the given constraints, we'll take the following steps:
-
 1. **Create the HTML structure**:
     - An input field for the user to enter the binary number (up to 8 digits).
     - A button to trigger the conversion.
@@ -14,8 +12,6 @@ To build a Binary to Decimal converter (Bin2Dec) that follows the given constrai
 
 3. **Styling with CSS**:
     - Simple styling to make the application visually appealing and user-friendly.
-
-Here is the pseudocode for our approach:
 
 ### Pseudocode
 
